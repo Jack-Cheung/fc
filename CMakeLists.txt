@@ -1,21 +1,21 @@
 # Setup module path to make visible used CMake extensions
 #INCLUDE(GetPrerequisites)
 #INCLUDE(VersionMacros)
-
+cmake_minimum_required( VERSION 3.5 )
 SET( DEFAULT_HEADER_INSTALL_DIR usr/include/${target} )
 SET( DEFAULT_LIBRARY_INSTALL_DIR usr/lib )
 SET( DEFAULT_EXECUTABLE_INSTALL_DIR usr/bin )
 SET( CMAKE_DEBUG_POSTFIX _debug )
 SET( BUILD_SHARED_LIBS NO )
 SET( ECC_IMPL secp256k1 CACHE STRING "secp256k1 or openssl or mixed" )
-
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules")
 set(platformBitness 32)
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   set(platformBitness 64)
 endif()
 
 SET (ORIGINAL_LIB_SUFFIXES ${CMAKE_FIND_LIBRARY_SUFFIXES})
-
+include( SetupTargetMacros )
 add_subdirectory( secp256k1 )
 
 IF( ECC_IMPL STREQUAL openssl )
@@ -39,13 +39,16 @@ IF(NOT APPLE)
  SET(pthread_library pthread)
 ENDIF(NOT APPLE)
 
-IF(NOT "$ENV{OPENSSL_ROOT_DIR}" STREQUAL "")
-  set(OPENSSL_ROOT_DIR $ENV{OPENSSL_ROOT_DIR} )
-  set(OPENSSL_INCLUDE_DIR ${OPENSSL_ROOT_DIR}/include)
-  message(STATUS "Setting up OpenSSL root and include vars to ${OPENSSL_ROOT_DIR}, ${OPENSSL_INCLUDE_DIR}")
-ENDIF()
+# IF(NOT "$ENV{OPENSSL_ROOT_DIR}" STREQUAL "")
+#   set(OPENSSL_ROOT_DIR $ENV{OPENSSL_ROOT_DIR} )
+#   set(OPENSSL_INCLUDE_DIR ${OPENSSL_ROOT_DIR}/include)
+#   message(STATUS "Setting up OpenSSL root and include vars to ${OPENSSL_ROOT_DIR}, ${OPENSSL_INCLUDE_DIR}")
+# ENDIF()
 
-find_package(OpenSSL REQUIRED)
+set(OPENSSL_ROOT_DIR ./openssl)
+set(OPENSSL_INCLUDE_DIR ${OPENSSL_ROOT_DIR}/include)
+
+#find_package(OpenSSL REQUIRED)
 
 set( CMAKE_FIND_LIBRARY_SUFFIXES ${ORIGINAL_LIB_SUFFIXES} )
 
@@ -172,8 +175,8 @@ IF(NOT DEFINED SKIP_FC_TESTS)
   add_subdirectory( test )
 ENDIF()
 
-install(TARGETS fc
-   LIBRARY DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
-   ARCHIVE DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR})
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/fc DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR})
+# install(TARGETS fc
+#   LIBRARY DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
+#   ARCHIVE DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR})
+# install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/fc DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR})
 

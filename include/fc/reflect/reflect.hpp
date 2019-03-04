@@ -122,7 +122,7 @@ struct reflector_init_visitor {
 
    // SFINAE if Class not derived from reflect_init
    template<class T>
-   typename std::enable_if<not std::is_base_of<fc::reflect_init, T>::value>::type
+   typename std::enable_if<! std::is_base_of<fc::reflect_init, T>::value>::type
    init_imp(T& t) {}
 
    template<typename T>

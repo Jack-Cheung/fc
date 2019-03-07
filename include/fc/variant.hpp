@@ -99,10 +99,10 @@ namespace fc
    void to_variant( const int32_t& var,  variant& vo );
    void from_variant( const variant& var,  int32_t& vo );
 
-   void to_variant( const unsigned __int128& var,  variant& vo );
-   void from_variant( const variant& var,  unsigned __int128& vo );
-   void to_variant( const __int128& var,  variant& vo );
-   void from_variant( const variant& var,  __int128& vo );
+   void to_variant( const uint128_t& var,  variant& vo );
+   void from_variant( const variant& var,  uint128_t& vo );
+   void to_variant( const int128_t& var,  variant& vo );
+   void from_variant( const variant& var,  int128_t& vo );
 
    void to_variant( const variant_object& var,  variant& vo );
    void from_variant( const variant& var,  variant_object& vo );

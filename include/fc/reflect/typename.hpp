@@ -11,6 +11,7 @@
 #include <fc/container/deque_fwd.hpp>
 
 namespace fc {
+
   class value;
   class exception;
   namespace ip { class address; }
@@ -24,8 +25,8 @@ namespace fc {
   template<> struct get_typename<uint32_t> { static const char* name()  { return "uint32_t"; } };
   template<> struct get_typename<int64_t>  { static const char* name()  { return "int64_t";  } };
   template<> struct get_typename<uint64_t> { static const char* name()  { return "uint64_t"; } };
-  template<> struct get_typename<__int128>          { static const char* name()  { return "int128_t";  } };
-  template<> struct get_typename<unsigned __int128> { static const char* name()  { return "uint128_t"; } };
+  //template<> struct get_typename<uint128_t>          { static const char* name()  { return "int128_t";  } };
+  //template<> struct get_typename<unsigned __int128> { static const char* name()  { return "uint128_t"; } };
 
   template<> struct get_typename<double>   { static const char* name()  { return "double";   } };
   template<> struct get_typename<float>    { static const char* name()  { return "float";    } };

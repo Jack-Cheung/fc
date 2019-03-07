@@ -289,9 +289,9 @@ template<BOOST_PP_SEQ_ENUM(TEMPLATE_ARGS)> struct reflector<TYPE> {\
       total_member_count = local_member_count BOOST_PP_SEQ_FOR_EACH( FC_REFLECT_BASE_MEMBER_COUNT, +, INHERITS )\
     }; \
     FC_REFLECT_DERIVED_IMPL_INLINE( TYPE, INHERITS, MEMBERS ) \
-    static_assert( not fc::has_reflector_init<TYPE>::value || \
+    static_assert( ! fc::has_reflector_init<TYPE>::value || \
                    std::is_base_of<fc::reflect_init, TYPE>::value, "must derive from fc::reflect_init" ); \
-    static_assert( not std::is_base_of<fc::reflect_init, TYPE>::value || \
+    static_assert( ! std::is_base_of<fc::reflect_init, TYPE>::value || \
                    fc::has_reflector_init<TYPE>::value, "must provide reflector_init() method" ); \
 }; }
 

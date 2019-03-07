@@ -7,8 +7,10 @@ SET( DEFAULT_LIBRARY_INSTALL_DIR usr/lib )
 SET( DEFAULT_EXECUTABLE_INSTALL_DIR usr/bin )
 SET( CMAKE_DEBUG_POSTFIX _debug )
 SET( BUILD_SHARED_LIBS NO )
-SET( ECC_IMPL secp256k1 CACHE STRING "secp256k1 or openssl or mixed" )
+SET( ECC_IMPL openssl CACHE STRING "secp256k1 or openssl or mixed" )
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules")
+set( CMAKE_CXX_STANDARD 14 )
+
 set(platformBitness 32)
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   set(platformBitness 64)
@@ -16,7 +18,7 @@ endif()
 
 SET (ORIGINAL_LIB_SUFFIXES ${CMAKE_FIND_LIBRARY_SUFFIXES})
 include( SetupTargetMacros )
-add_subdirectory( secp256k1 )
+#add_subdirectory( secp256k1 )
 
 IF( ECC_IMPL STREQUAL openssl )
   SET( ECC_REST src/crypto/elliptic_impl_pub.cpp )
@@ -29,9 +31,9 @@ ELSE( ECC_IMPL STREQUAL openssl )
   ENDIF( ECC_IMPL STREQUAL mixed )
 ENDIF( ECC_IMPL STREQUAL openssl )
 
-MESSAGE(STATUS "Configuring fc to build on Unix/Apple")
+MESSAGE(STATUS "Configuring fc to build on WIN32")
 
-SET(CMAKE_FIND_LIBRARY_SUFFIXES ".a;.so")
+SET(CMAKE_FIND_LIBRARY_SUFFIXES ".a;.so;.lib;.dll")
 
 IF(NOT APPLE)
  # Linux or other unix
@@ -171,9 +173,9 @@ ELSE()
   SET (OPENSSL_CONF_TARGET ${CMAKE_CURRENT_BINARY_DIR})
 ENDIF()
 
-IF(NOT DEFINED SKIP_FC_TESTS)
-  add_subdirectory( test )
-ENDIF()
+#IF(NOT DEFINED SKIP_FC_TESTS)
+#  add_subdirectory( test )
+#ENDIF()
 
 # install(TARGETS fc
 #   LIBRARY DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}

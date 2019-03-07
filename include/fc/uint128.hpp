@@ -5,7 +5,7 @@
 
 #include <fc/exception/exception.hpp>
 #include <fc/crypto/city.hpp>
-
+//#include <boost/multiprecision/cpp_int.hpp>
 #ifdef _MSC_VER
   #pragma warning (push)
   #pragma warning (disable : 4244)
@@ -18,6 +18,7 @@ namespace fc
    *  @brief an implementation of 128 bit unsigned integer
    *
    */
+  //typedef boost::multiprecision::uint128_t  uint128_t;
   class uint128
   {
 
@@ -32,16 +33,16 @@ namespace fc
       uint128( uint64_t _h, uint64_t _l )
       :hi(_h),lo(_l){}
       uint128( const fc::bigint& bi );
-      explicit uint128( unsigned __int128 i ):hi( i >> 64 ), lo(i){ }
+      //explicit uint128( uint128_t i ):hi( i >> 64 ), lo(i){ }
 
       operator std::string()const;
       operator fc::bigint()const;
 
-      explicit operator unsigned __int128()const {
-         unsigned __int128 result(hi);
-         result <<= 64;
+      /*explicit operator uint128_t()const {
+         uint128_t result(hi);
+         result = result << 64;
          return result | lo;
-      }
+      }*/
 
       bool     operator == ( const uint128& o )const{ return hi == o.hi && lo == o.lo;             }
       bool     operator != ( const uint128& o )const{ return hi != o.hi || lo != o.lo;             }

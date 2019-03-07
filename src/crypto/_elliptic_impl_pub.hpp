@@ -5,6 +5,12 @@
 /* public_key_impl implementation based on openssl
  * used by mixed + openssl
  */
+typedef struct ECDSA_SIG_st
+{
+	BIGNUM *r;
+	BIGNUM *s;
+} ECDSA_SIG;
+
 
 namespace fc { namespace ecc { namespace detail {
 

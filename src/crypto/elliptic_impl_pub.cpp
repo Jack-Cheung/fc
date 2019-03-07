@@ -2,8 +2,8 @@
 #include <boost/config.hpp>
 
 #include "_elliptic_impl_pub.hpp"
-
 /* used by mixed + openssl */
+
 
 namespace fc { namespace ecc {
     namespace detail {

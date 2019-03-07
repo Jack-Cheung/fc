@@ -124,7 +124,7 @@ namespace fc {
            fc::sha512 get_shared_secret( const public_key& pub )const;
 
 //           signature         sign( const fc::sha256& digest )const;
-           compact_signature sign_compact( const fc::sha256& digest, bool require_canonical = true )const;
+           compact_signature sign_compact( const fc::sha256& digest/*, bool require_canonical = true*/ )const;
 //           bool              verify( const fc::sha256& digest, const signature& sig );
 
            public_key get_public_key()const;
@@ -210,7 +210,7 @@ namespace fc {
 
          signature_type sign( const sha256& digest, bool require_canonical = true ) const
          {
-           return signature_type(private_key::regenerate(_data).sign_compact(digest, require_canonical));
+           return signature_type(private_key::regenerate(_data).sign_compact(digest/*, require_canonical*/));
          }
 
          public_key_type get_public_key( ) const

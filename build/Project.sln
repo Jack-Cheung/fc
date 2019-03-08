@@ -4,8 +4,8 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{7E5C12BC-5688-3844-A961-1BE098A2C55A}"
 	ProjectSection(ProjectDependencies) = postProject
-		{D1B4E894-CC0E-35AC-B8B5-0E9F47661D83} = {D1B4E894-CC0E-35AC-B8B5-0E9F47661D83}
 		{E511A500-5DBD-3E4E-8622-4D3CDF75EBF7} = {E511A500-5DBD-3E4E-8622-4D3CDF75EBF7}
+		{D1B4E894-CC0E-35AC-B8B5-0E9F47661D83} = {D1B4E894-CC0E-35AC-B8B5-0E9F47661D83}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{D1B4E894-CC0E-35AC-B8B5-0E9F47661D83}"
@@ -16,6 +16,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fc", "fc.vcxproj", "{E511A5
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_fc_lib", "..\test_fc_lib\test_fc_lib.vcxproj", "{1A3AA596-5710-4D97-BCC6-3C016851E766}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E511A500-5DBD-3E4E-8622-4D3CDF75EBF7} = {E511A500-5DBD-3E4E-8622-4D3CDF75EBF7}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

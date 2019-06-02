@@ -18,5 +18,11 @@
     <ClCompile Include="..\test\crypto\test_cypher_suites.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\test\crypto\test_pke_suites.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\pke.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

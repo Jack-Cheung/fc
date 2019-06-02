@@ -179,6 +179,33 @@
     <ClCompile Include="..\src\variant_object.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\fc\crypto\aes.hpp" />
+    <ClInclude Include="..\include\fc\crypto\base32.hpp" />
+    <ClInclude Include="..\include\fc\crypto\base36.hpp" />
+    <ClInclude Include="..\include\fc\crypto\base58.hpp" />
+    <ClInclude Include="..\include\fc\crypto\base64.hpp" />
+    <ClInclude Include="..\include\fc\crypto\bigint.hpp" />
+    <ClInclude Include="..\include\fc\crypto\blowfish.hpp" />
+    <ClInclude Include="..\include\fc\crypto\city.hpp" />
+    <ClInclude Include="..\include\fc\crypto\common.hpp" />
+    <ClInclude Include="..\include\fc\crypto\dh.hpp" />
+    <ClInclude Include="..\include\fc\crypto\digest.hpp" />
+    <ClInclude Include="..\include\fc\crypto\elliptic.hpp" />
+    <ClInclude Include="..\include\fc\crypto\elliptic_r1.hpp" />
+    <ClInclude Include="..\include\fc\crypto\equihash.hpp" />
+    <ClInclude Include="..\include\fc\crypto\hex.hpp" />
+    <ClInclude Include="..\include\fc\crypto\hmac.hpp" />
+    <ClInclude Include="..\include\fc\crypto\openssl.hpp" />
+    <ClInclude Include="..\include\fc\crypto\pke.hpp" />
+    <ClInclude Include="..\include\fc\crypto\private_key.hpp" />
+    <ClInclude Include="..\include\fc\crypto\public_key.hpp" />
+    <ClInclude Include="..\include\fc\crypto\rand.hpp" />
+    <ClInclude Include="..\include\fc\crypto\ripemd160.hpp" />
+    <ClInclude Include="..\include\fc\crypto\sha1.hpp" />
+    <ClInclude Include="..\include\fc\crypto\sha224.hpp" />
+    <ClInclude Include="..\include\fc\crypto\sha256.hpp" />
+    <ClInclude Include="..\include\fc\crypto\sha512.hpp" />
+    <ClInclude Include="..\include\fc\crypto\signature.hpp" />
     <ClInclude Include="..\include\fc\exception\exception.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

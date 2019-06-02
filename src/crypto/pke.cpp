@@ -6,7 +6,7 @@
 #include <openssl/err.h>
 #include <fc/crypto/base64.hpp>
 #include <fc/io/sstream.hpp>
-#include <fc/io/stdio.hpp>
+//#include <fc/io/stdio.hpp>
 #include <fc/exception/exception.hpp>
 #include <fc/variant.hpp>
 
@@ -74,13 +74,15 @@ namespace fc {
 
     bool public_key::verify( const sha1& digest, const signature& sig )const
     {
-       static_assert( sig.size() == 2048/8, "" );
+       //static_assert( sig.size() == 2048/8, "" );
+       FC_ASSERT( sig.size() == 2048/8, "" );
        return 0 != RSA_verify( NID_sha1, (const uint8_t*)&digest, 20,
                                (uint8_t*)sig.data(), 2048/8, my->rsa );
     }
     bool public_key::verify( const sha256& digest, const signature& sig )const
     {
-       static_assert( sig.size() == 2048/8, "" );
+       //static_assert( sig.size() == 2048/8, "" );
+       FC_ASSERT( sig.size() == 2048/8, "" );
        return 0 != RSA_verify( NID_sha256, (const uint8_t*)&digest, 32,
                                (uint8_t*)sig.data(), 2048/8, my->rsa );
     }
@@ -107,7 +109,7 @@ namespace fc {
                                       (unsigned char*)in.data(),
                                       (unsigned char*)out.data(),
                                       my->rsa, RSA_PKCS1_OAEP_PADDING );
-       fc::cerr<<"rtn: "<<rtn<<"\n";
+       std::cerr<<"rtn: "<<rtn<<"\n";
        if( rtn >= 0 ) {
           out.resize(rtn);
           return out;
@@ -144,15 +146,15 @@ namespace fc {
        char* dat;
        uint32_t l = BIO_get_mem_data( mem, &dat );
 
-       fc::stringstream ss( string( dat, l ) );
-       fc::stringstream key;
+       std::stringstream ss( string( dat, l ) );
+       std::stringstream key;
        fc::string tmp;
-       fc::getline( ss, tmp );
-       fc::getline( ss, tmp );
+       std::getline( ss, tmp );
+       std::getline( ss, tmp );
        while( tmp.size() && tmp[0] != '-' )
        {
          key << tmp; 
-         fc::getline( ss, tmp );
+         std::getline( ss, tmp );
        }
        auto str = key.str();
        str = fc::base64_decode( str );
@@ -307,16 +309,16 @@ namespace fc {
        uint32_t l = BIO_get_mem_data( mem, &dat );
     //   return bytes( dat, dat + l );
 
-       stringstream ss( string( dat, l ) );
-       stringstream key;
+       std::stringstream ss( string( dat, l ) );
+       std::stringstream key;
        string tmp;
-       fc::getline( ss, tmp );
-       fc::getline( ss, tmp );
+       std::getline( ss, tmp );
+       std::getline( ss, tmp );
 
        while( tmp.size() && tmp[0] != '-' )
        {
          key << tmp; 
-         fc::getline( ss, tmp );
+         std::getline( ss, tmp );
        }
        auto str = key.str();
        str = fc::base64_decode( str );

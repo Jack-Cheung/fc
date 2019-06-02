@@ -40,6 +40,9 @@
     <Filter Include="头文件\fc\exception">
       <UniqueIdentifier>{9415bbbc-8a81-4c36-a9f0-462a8162ea75}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\fc\crypto">
+      <UniqueIdentifier>{fc22044b-6216-48b0-8ad7-514f90736645}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\exception.cpp">
@@ -214,6 +217,87 @@
   <ItemGroup>
     <ClInclude Include="..\include\fc\exception\exception.hpp">
       <Filter>头文件\fc\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\aes.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\base32.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\base36.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\base58.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\base64.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\bigint.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\blowfish.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\city.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\common.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\dh.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\digest.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\elliptic.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\elliptic_r1.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\equihash.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\hex.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\hmac.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\openssl.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\pke.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\private_key.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\public_key.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\rand.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\ripemd160.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\sha1.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\sha224.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\sha256.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\sha512.hpp">
+      <Filter>头文件\fc\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fc\crypto\signature.hpp">
+      <Filter>头文件\fc\crypto</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

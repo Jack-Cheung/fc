@@ -1,5 +1,5 @@
 /build
 *.user
-.vs
+/.vs
+/.vscode
 /msvc/*/
-

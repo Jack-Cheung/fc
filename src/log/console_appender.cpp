@@ -22,7 +22,7 @@ namespace fc {
      config                      cfg;
      boost::mutex                log_mutex;
      color::type                 lc[log_level::off+1];
-     bool                        use_syslog_header{getenv("JOURNAL_STREAM")};
+     bool                        use_syslog_header{(bool)getenv("JOURNAL_STREAM")};
 #ifdef WIN32
      HANDLE                      console_handle;
 #endif

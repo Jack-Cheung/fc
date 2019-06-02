@@ -2,6 +2,15 @@
 #include <fc/crypto/elliptic.hpp>
 #include <boost/config.hpp>
 
+#ifdef _MSC_VER
+extern "C"{
+    struct ECDSA_SIG_st {
+        BIGNUM *r;
+        BIGNUM *s;
+    };
+}
+#endif
+
 /* public_key_impl implementation based on openssl
  * used by mixed + openssl
  */

@@ -184,8 +184,9 @@ namespace fc { namespace ecc {
       return buf;
     }
 
-    compact_signature private_key::sign_compact( const fc::sha256& digest )const
+    compact_signature private_key::sign_compact( const fc::sha256& digest, bool require_canonical)const
     {
+        (void)require_canonical;
         try {
             FC_ASSERT( my->_key != nullptr );
             auto my_pub_key = get_public_key().serialize(); // just for good measure

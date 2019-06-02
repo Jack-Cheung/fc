@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\io">
+      <UniqueIdentifier>{cd2314c0-5e9a-4d6a-af7f-6e0c69b57c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\interprocess">
+      <UniqueIdentifier>{9201953b-57cf-417c-bb9c-af210af8ca94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\log">
+      <UniqueIdentifier>{7d10d097-ad61-4cfd-b68f-1ae53648408a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\crypto">
+      <UniqueIdentifier>{45bb7622-aa87-4085-905b-9070fcd3469f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\network">
+      <UniqueIdentifier>{3b2332c2-c6e1-4a3b-9334-82041c983dc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\network\http">
+      <UniqueIdentifier>{abc92d22-e9d9-4c48-8f90-e09ae91c7dfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\compress">
+      <UniqueIdentifier>{7bbe9a0b-8bfe-4125-8ebe-c525bea9614e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\fc">
+      <UniqueIdentifier>{24e70554-60ec-4233-aeee-ae9bd81f250f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\fc\exception">
+      <UniqueIdentifier>{9415bbbc-8a81-4c36-a9f0-462a8162ea75}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\exception.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\real128.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\shared_ptr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\string.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\time.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\uint128.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utf8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\variant.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\variant_object.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\io\console.cpp">
+      <Filter>源文件\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\io\datastream.cpp">
+      <Filter>源文件\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\io\fstream.cpp">
+      <Filter>源文件\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\io\json.cpp">
+      <Filter>源文件\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\io\varint.cpp">
+      <Filter>源文件\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\filesystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\interprocess\file_mapping.cpp">
+      <Filter>源文件\interprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\interprocess\mmap_struct.cpp">
+      <Filter>源文件\interprocess</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\log\appender.cpp">
+      <Filter>源文件\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\log\console_appender.cpp">
+      <Filter>源文件\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\log\gelf_appender.cpp">
+      <Filter>源文件\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\log\log_message.cpp">
+      <Filter>源文件\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\log\logger.cpp">
+      <Filter>源文件\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\log\logger_config.cpp">
+      <Filter>源文件\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\_digest_common.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\aes.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\base36.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\base58.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\base64.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\bigint.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\blowfish.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\city.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\crc.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\dh.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\elliptic_common.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\hex.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\openssl.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\ripemd160.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\sha1.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\sha224.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\sha256.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\sha512.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\elliptic_impl_pub.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\elliptic_openssl.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\elliptic_r1.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\private_key.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\public_key.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\rand.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crypto\signature.cpp">
+      <Filter>源文件\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\network\ip.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\network\platform_root_ca.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\network\resolve.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\network\udp_socket.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\network\url.cpp">
+      <Filter>源文件\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\network\http\http_client.cpp">
+      <Filter>源文件\network\http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compress\smaz.cpp">
+      <Filter>源文件\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compress\zlib.cpp">
+      <Filter>源文件\compress</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\fc\exception\exception.hpp">
+      <Filter>头文件\fc\exception</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

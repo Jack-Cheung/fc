@@ -50,7 +50,8 @@ namespace fc
 #ifdef WIN32
            // On windows, a URL like file:///c:/autoexec.bat would result in _lpath = c:/autoexec.bat
            // which is what we really want (it's already an absolute path)
-           if (!stricmp(_proto.c_str(), "file"))
+#pragma warning(suppress : 4996)
+		   if (!stricmp(_proto.c_str(), "file"))
               _path = _lpath;
            else
               _path = fc::path( "/" ) / _lpath; // let other schemes behave like unix

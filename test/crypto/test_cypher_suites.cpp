@@ -1,6 +1,9 @@
 #define BOOST_TEST_MODULE cypher_suites
 #include <boost/test/unit_test.hpp>
 
+#define BOOST_TEST_SOURCE
+#include <boost/test/impl/unit_test_main.ipp>
+
 #include <fc/crypto/public_key.hpp>
 #include <fc/crypto/private_key.hpp>
 #include <fc/crypto/signature.hpp>

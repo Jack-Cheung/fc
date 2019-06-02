@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{7A11D654-8C75-4197-AF17-695608CCC6F3}</ProjectGuid>
+    <RootNamespace>fc</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="build_fc.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="build_fc.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="build_fc.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="build_fc.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(OutDir)temp\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\compress\smaz.cpp" />
+    <ClCompile Include="..\src\compress\zlib.cpp" />
+    <ClCompile Include="..\src\crypto\aes.cpp" />
+    <ClCompile Include="..\src\crypto\base36.cpp" />
+    <ClCompile Include="..\src\crypto\base58.cpp" />
+    <ClCompile Include="..\src\crypto\base64.cpp" />
+    <ClCompile Include="..\src\crypto\bigint.cpp" />
+    <ClCompile Include="..\src\crypto\blowfish.cpp" />
+    <ClCompile Include="..\src\crypto\city.cpp" />
+    <ClCompile Include="..\src\crypto\crc.cpp" />
+    <ClCompile Include="..\src\crypto\dh.cpp" />
+    <ClCompile Include="..\src\crypto\elliptic_common.cpp" />
+    <ClCompile Include="..\src\crypto\elliptic_impl_pub.cpp" />
+    <ClCompile Include="..\src\crypto\elliptic_openssl.cpp" />
+    <ClCompile Include="..\src\crypto\elliptic_r1.cpp" />
+    <ClCompile Include="..\src\crypto\hex.cpp" />
+    <ClCompile Include="..\src\crypto\openssl.cpp" />
+    <ClCompile Include="..\src\crypto\private_key.cpp" />
+    <ClCompile Include="..\src\crypto\public_key.cpp" />
+    <ClCompile Include="..\src\crypto\rand.cpp" />
+    <ClCompile Include="..\src\crypto\ripemd160.cpp" />
+    <ClCompile Include="..\src\crypto\sha1.cpp" />
+    <ClCompile Include="..\src\crypto\sha224.cpp" />
+    <ClCompile Include="..\src\crypto\sha256.cpp" />
+    <ClCompile Include="..\src\crypto\sha512.cpp" />
+    <ClCompile Include="..\src\crypto\signature.cpp" />
+    <ClCompile Include="..\src\crypto\_digest_common.cpp" />
+    <ClCompile Include="..\src\exception.cpp" />
+    <ClCompile Include="..\src\filesystem.cpp" />
+    <ClCompile Include="..\src\interprocess\file_mapping.cpp" />
+    <ClCompile Include="..\src\interprocess\mmap_struct.cpp" />
+    <ClCompile Include="..\src\io\console.cpp" />
+    <ClCompile Include="..\src\io\datastream.cpp" />
+    <ClCompile Include="..\src\io\fstream.cpp" />
+    <ClCompile Include="..\src\io\json.cpp" />
+    <ClCompile Include="..\src\io\varint.cpp" />
+    <ClCompile Include="..\src\log\appender.cpp" />
+    <ClCompile Include="..\src\log\console_appender.cpp" />
+    <ClCompile Include="..\src\log\gelf_appender.cpp" />
+    <ClCompile Include="..\src\log\logger.cpp" />
+    <ClCompile Include="..\src\log\logger_config.cpp" />
+    <ClCompile Include="..\src\log\log_message.cpp" />
+    <ClCompile Include="..\src\network\http\http_client.cpp" />
+    <ClCompile Include="..\src\network\ip.cpp" />
+    <ClCompile Include="..\src\network\platform_root_ca.cpp" />
+    <ClCompile Include="..\src\network\resolve.cpp" />
+    <ClCompile Include="..\src\network\udp_socket.cpp" />
+    <ClCompile Include="..\src\network\url.cpp" />
+    <ClCompile Include="..\src\real128.cpp" />
+    <ClCompile Include="..\src\shared_ptr.cpp" />
+    <ClCompile Include="..\src\string.cpp" />
+    <ClCompile Include="..\src\time.cpp" />
+    <ClCompile Include="..\src\uint128.cpp" />
+    <ClCompile Include="..\src\utf8.cpp" />
+    <ClCompile Include="..\src\variant.cpp" />
+    <ClCompile Include="..\src\variant_object.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\fc\exception\exception.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

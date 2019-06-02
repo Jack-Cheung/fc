@@ -106,6 +106,7 @@ public:
       }
    }
 
+#pragma warning(suppress : 4996)
    template<typename SyncReadStream, typename Fn>
    error_code sync_do_with_deadline( SyncReadStream& s, deadline_type deadline, Fn f) {
       return sync_do_with_deadline(s, deadline, f, [&s](){
